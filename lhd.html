@@ -1,47 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-	table,td,th{
-		border:1px solid #000;
-		border-collapse: collapse;
-	}
-	td{
-		text-align: center;
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
-	<h2>表格</h2>
-	<p>table 表格标签</p>
-	<p>表格的行</p>
-	<p>td 表格的单元格</p>
-	<p>th 表头</p>
-<table width="620" boder="15" cellspacing="10">
- <caption>学生信息表</caption>
-<tr>
-   <th>姓名</th>
-   <th> 年龄</th>   
-   <th>班级</th>
-   <th>爱好</th>
-   <tr>
-   <td>倪浩</td>
-   <td>12</td>
-   <td>软件151</td>
-   <td>lol</td>
-   <tr>
-   <td>夏远征</td>
-   <td>18</td>
-   <td>软件151</td>
-   <td>无</td>
-   </tr>
-   <tr>
-	<td>张天一</td>
-	<td>2</td>
-	<td>软件151</td>
-	<td>动漫</td>
-	</tr>
+    <h2>iframe</h2>
+    <p>嵌入网页</p>
+    <p><label for="keyword"></label><input id="keyword" type="text"><button>搜索</button></p>
+    <iframe src="http://www.baidu.com/s?wd=html15 "frameborder="0"width="100%"hight="700"></iframe>
+    <hr>
+    <iframe name="abc" src="" frameborder="0" width="100%" height="725"></iframe>
+
+    <h2>audio</h2>
+    <audio autoplay="ture" controls="controls">
+    <source src="movie.ogg" type="audio/ogg"/> 
+    <source src="movie.mp3" type="audio/mpeg"/>       
+    </audio>
+    <video controls="controls">
+        <source src="movie.mp4" type="audio/mpeg"/>
+        You browser does not support the video element.
+    </video>
+
 </body>
 </html>
