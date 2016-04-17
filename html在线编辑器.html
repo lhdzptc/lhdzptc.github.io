@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://zptcsoft.github.io/ppt/demos/editor.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>html在线编辑器</title>
+
+    <!-- split pane -->
+    <link rel="stylesheet" href="./html在线编辑器_files/split-pane.css">
+    <link rel="stylesheet" href="./html在线编辑器_files/pretty-split-pane.css">
+    <script src="./html在线编辑器_files/jquery.min.js"></script>
+    <script src="./html在线编辑器_files/split-pane.min.js"></script>
+    <!-- codemirror -->
+    <link rel="stylesheet" href="./html在线编辑器_files/codemirror.css">
+    <script src="./html在线编辑器_files/codemirror.js"></script>
+    <script src="./html在线编辑器_files/matchbrackets.js"></script>
+    <script src="./html在线编辑器_files/xml.js"></script>
+    <script src="./html在线编辑器_files/javascript.js"></script>
+    <script src="./html在线编辑器_files/css.js"></script>
+    <script src="./html在线编辑器_files/htmlmixed.js"></script>
+    <script src="./html在线编辑器_files/searchcursor.js"></script>
+    <script src="./html在线编辑器_files/search.js"></script>
+    <script src="./html在线编辑器_files/active-line.js"></script>
+    <link rel="stylesheet" href="./html在线编辑器_files/monokai.css">
+    <!-- <link rel="stylesheet" href="lib/codemirror/theme/mdn-like.css" /> -->
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+        min-height: 90%;
+        margin: 0;
+        padding: 0;
+    }
+    .vertical-percent #left-component {
+        right: 50%;
+        margin-right: 2px;
+    }
+    
+    .vertical-percent #my-divider {
+        right: 50%;
+        width: 2px;
+    }
+    
+    .vertical-percent #right-component {
+        width: 50%;
+        padding: 0;
+        overflow-y: hidden;
+    }
+    
+    #editor{
+        height: 100%;
+        overflow: hidden;
+    }
+    .CodeMirror {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+    }
+    
+    #preview{
+        background-color: white;
+        background-image: none;
+        width: 100%;
+        height: 98%;
+        overflow: auto;
+        border: none;
+    }
+    .btn{
+        position: absolute;
+        top: 2px;
+        z-index: 1000;
+        background-color:rgba(255,255,255,.1);
+        color: rgba(255,0,100,.8);
+        text-decoration: none;
+        width: 40px;
+        height: 28px;
+        text-align: center;
+        line-height: 28px;
+        border-left: 1px solid rgba(100,100,100,.4);
+        border-bottom: 1px solid rgba(100,100,100,.4);
+        font-size: 15px;
+    }
+    #themeBtn{
+        right: 102px;
+    }
+    #downBtn{
+        right: 22px;
+        border-right: 1px solid rgba(100,100,100,.4);
+    }
+    #openBtn{
+        opacity: 0;
+        display: none;
+    }
+    #openBtnLabel{
+        right: 62px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="pretty-split-pane-frame">
+        <div class="split-pane vertical-percent" style="min-width: 2px;">
+            <div class="split-pane-component" id="left-component">
+                <div class="pretty-split-pane-component-inner">
+                    <textarea id="editor" style="display: none;"></textarea><div class="CodeMirror cm-s-monokai"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 579px; left: 92px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 0px; display: block;"><div style="min-width: 1px; height: 1043px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="right: 17px; left: 29px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 17px; width: 17px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: -17px; border-right-width: 13px; min-width: 328.75px; min-height: 1043px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>9</div></div><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>42</div></div><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>42</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 63px; top: 575px; height: 23px;">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span> <span class="cm-attribute">lang</span>=<span class="cm-string">"en"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"UTF-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span>Document<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=""><span style="padding-right: 0.1px;">    <span class="cm-tag">body</span>{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre><span style="padding-right: 0.1px;">      <span class="cm-property">background-color</span>:<span class="cm-atom">#6f1</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=""><span style="padding-right: 0.1px;">        }  </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre><span style="padding-right: 0.1px;">  <span class="cm-tag">p</span>{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-property">font-family</span>:黑体;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-property">font-size</span>:<span class="cm-number">1.75em</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=""><span style="padding-right: 0.1px;">    <span class="cm-property">color</span>:<span class="cm-keyword">blue</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-property">margin-top</span>:<span class="cm-number">2em</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-property">margin-bottom</span>:<span class="cm-number">3.1em</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-property">text-indent</span>:<span class="cm-number">2.2em</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=""><span style="padding-right: 0.1px;">    <span class="cm-property">line-height</span>:<span class="cm-number">1.5em</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=""><span style="padding-right: 0.1px;">  </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=""><span style="padding-right: 0.1px;">  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre><span style="padding-right: 0.1px;">    <span class="cm-tag">p</span>::<span class="cm-variable-3">first-letter</span>{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=""><span style="padding-right: 0.1px;">      <span class="cm-property">font-size</span>:<span class="cm-number">1.9em</span>; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre><span style="padding-right: 0.1px;">      <span class="cm-property">margin</span>:<span class="cm-number">5.5px</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=""><span style="padding-right: 0.1px;">    }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre><span style="padding-right: 0.1px;">     <span class="cm-tag">p</span>::<span class="cm-variable-3">first-line</span>{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=""><span style="padding-right: 0.1px;">       <span class="cm-property">text-decoration</span>:<span class="cm-atom">underline</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=""><span style="padding-right: 0.1px;">       <span class="cm-property">font-weight</span>:<span class="cm-atom">bold</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=""><span style="padding-right: 0.1px;">     }    </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre><span style="padding-right: 0.1px;"> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span> <span class="cm-attribute">align</span>=<span class="cm-string">"center"</span> <span class="cm-tag cm-bracket">&gt;</span>将进酒<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=""><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>君不见，黄河之水天上来，奔流到海不复回。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre><span style="padding-right: 0.1px;">    君不见，高堂明镜悲白发，朝如青丝暮成雪。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre><span style="padding-right: 0.1px;">   人生得意须尽欢，莫使金樽空对月。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre><span style="padding-right: 0.1px;">   天生我材必有用，千金散尽还复来。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div></div><pre><span style="padding-right: 0.1px;">   烹羊宰牛且为乐，会须一饮三百杯。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre><span style="padding-right: 0.1px;">  岑夫子，丹丘生，将进酒，杯莫停。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre><span style="padding-right: 0.1px;">  与君歌一曲，请君为我倾耳听。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre><span style="padding-right: 0.1px;">  钟鼓馔玉不足贵，但愿长醉不复醒。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre><span style="padding-right: 0.1px;">  古来圣贤皆寂寞，惟有饮者留其名。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">40</div></div><pre><span style="padding-right: 0.1px;">  陈王昔时宴平乐，斗酒十千恣欢谑。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">41</div></div><pre><span style="padding-right: 0.1px;">  主人何为言少钱，径须沽取对君酌。</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">42</div></div><pre><span style="padding-right: 0.1px;">  五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。 <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">43</div></div><pre><span style="padding-right: 0.1px;">  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>人生苦短，但愿长醉不愿醒。<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">44</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px; width: 29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">45</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; top: 1043px;"></div><div class="CodeMirror-gutters" style="height: 1056px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+                    <a href="https://zptcsoft.github.io/ppt/demos/editor.html#" class="btn black" id="themeBtn">白色</a>
+                    <a href="blob:https%3A//zptcsoft.github.io/96d234ec-c886-446c-9a98-b311996a6d0b" class="btn" id="downBtn" download="lhd.html.txt">下载</a>
+                    <label class="btn" id="openBtnLabel" for="openBtn">本地</label>
+                    <input type="file" name="openBtn" id="openBtn">
+                </div>
+            </div>
+            <div class="split-pane-divider" id="my-divider"><div class="split-pane-divider-inner"></div></div>
+            <div class="split-pane-component" id="right-component">
+                <div class="pretty-split-pane-component-inner">
+                    <iframe id="preview" sandbox="allow-popups allow-scripts allow-pointer-lock allow-forms" srcdoc="&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    body{
+      background-color:#6f1;
+        }  
+  p{
+    font-family:黑体;
+    font-size:1.75em;
+    color:blue;
+    margin-top:2em;
+    margin-bottom:3.1em;
+    text-indent:2.2em;
+    line-height:1.5em;
+  
+  }
+    p::first-letter{
+      font-size:1.9em; 
+      margin:5.5px;
+    }
+     p::first-line{
+       text-decoration:underline;
+       font-weight:bold;
+     }    
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;h1 align=&quot;center&quot; &gt;将进酒&lt;/h1&gt;
+  &lt;p&gt;君不见，黄河之水天上来，奔流到海不复回。
+    君不见，高堂明镜悲白发，朝如青丝暮成雪。
+   人生得意须尽欢，莫使金樽空对月。
+   天生我材必有用，千金散尽还复来。
+   烹羊宰牛且为乐，会须一饮三百杯。
+  岑夫子，丹丘生，将进酒，杯莫停。
+  与君歌一曲，请君为我倾耳听。
+  钟鼓馔玉不足贵，但愿长醉不复醒。
+  古来圣贤皆寂寞，惟有饮者留其名。
+  陈王昔时宴平乐，斗酒十千恣欢谑。
+  主人何为言少钱，径须沽取对君酌。
+  五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。 &lt;/p&gt;
+  &lt;p&gt;人生苦短，但愿长醉不愿醒。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;"></iframe>
+                </div>
+            </div>
+        <div class="split-pane-resize-shim"></div></div>
+    </div>
+    <script src="./html在线编辑器_files/emmet.js"></script>
+    <script src="./html在线编辑器_files/htmleditor.js"></script>
+
+
+
+</body></html>
