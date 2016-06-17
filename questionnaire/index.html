@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="center">
+			<div class="header">
+				<h1 class="title">前端问卷调查</h1>
+			</div>
+			<div class="content">
+				<div class="content_us">
+					<p>尊敬的先生/女士：</p>
+					<p style="text-indent: 2em;">您好！感谢您在百忙之中填写问卷，请您根据自己的实际感受和看法如实填写，本问卷采用匿名形式，所有数据仅供学术研究分析使用。</p>
+				</div>
+			</div>
+			<div class="menu">
+				<div class="caption">
+					<h1>一、您的基本情况</h1>
+				</div>
+				<div class="contain" req="1" topic="1" name="q1" id="div1" type="3">
+					<h1 class="field">
+				1、您的性别：
+				<span class="req">*</span>
+            </h1>
+				</div>
+				<!--  <form role="form">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="sex" value="0" > A 男
+                </label>
+            </div>
+        </form> -->
+				<form role="form">
+
+					<div class="checkbox">
+						<input type="radio" id="checkbox2" name="sex1" value="boy">
+						<label for="checkbox2">
+                    A 男
+                </label>
+					</div>
+
+					<!--   <form role="form">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="sex" value="0" id="sex1"> B 女
+                </label>
+            </div>
+        </form> -->
+
+					<div class="checkbox">
+						<input type="radio" id="checkbox1" name="sex1" value="girl">
+						<label for="checkbox1">
+                    B 女
+                </label>
+					</div>
+
+				</form>
+				<div class="contain" req="1" topic="2" name="q1" id="div2" type="3">
+					<h1 class="field">
+                2、您的年龄：
+                <span class="req">*</span>
+            </h1>
+					<form role="form">
+						<div class="checkbox">
+							<input type="radio" id="radio5" name="age" value="1">
+							<label for="radio5">
+                    A 25岁以下
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio6" name="age" value="1">
+							<label for="radio6">
+                    B 26-35岁
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio7" name="age" value="1">
+							<label for="radio7">
+                    C 36-45岁
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio8" name="age" value="1">
+							<label for="radio8">
+                    D 45岁以上
+                </label>
+						</div>
+					</form>
+				</div>
+				<div class="contain" req="1" topic="3" name="q1" id="div3" type="3">
+					<h1 class="field">
+                2、您的工作年限：
+                <span class="req">*</span>
+            </h1>
+					<form role="form">
+						<div class="checkbox">
+							<input type="radio" id="radio4" name="year" value="1">
+							<label for="radio4">
+                    A 0-1年
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio3" name="year" value="1">
+							<label for="radio3">
+                    B 1-2年
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio2" name="year" value="1">
+							<label for="radio2">
+                    C 2-3年
+                </label>
+						</div>
+						<div class="checkbox">
+							<input type="radio" id="radio1" name="year" value="1">
+							<label for="radio1">
+                    D 3年以上
+                </label>
+						</div>
+						</from>
+				</div>
+				<div class="menu">
+					<div class="caption">
+						<h1>二、对工作的满意程度</h1>
+					</div>
+					<div class="contain" req="1" topic="4" name="q1" id="div4" type "3">
+						<h1 class="field">
+                1、您对目前的岗位满意吗？
+                <span class="req">*</span>
+            </h1>
+						<form role="form">
+							<div class="checkbox">
+								<input type="radio" id="radio9" name="currently" value="1">
+								<label for="radio9">
+                    A 很满意
+                </label>
+							</div>
+							<div class="checkbox">
+								<input type="radio" id="radio10" name="currently" value="1">
+								<label for="radio10">
+                    B 比较满意
+                </label>
+							</div>
+							<div class="checkbox">
+								<input type="radio" id="radio11" name="currently" value="1">
+								<label for="radio11">
+                    C 一般
+                </label>
+							</div>
+							<div class="checkbox">
+								<input type="radio" id="radio12" name="currently" value="1">
+								<label for="radio12">
+                    D 不满意
+                </label>
+							</div>
+						</form>
+						<div class="contain" req="1" topic="5" name="q1" id="div5" type "3">
+							<h1 class="field">
+                2、请问您的工资在哪一水平段
+                <!-- <span class="req">*</span> -->
+            </h1>
+							<form role="form">
+								<div class="checkbox">
+									<input type="radio" id="radio13" name="wages" value="1">
+									<label for="radio13">
+                    A 2K-5K
+                </label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" id="radio14" name="wages" value="1">
+									<label for="radio14">
+                    B 5K-10K
+                </label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" id="radio15" name="wages" value="1">
+									<label for="radio15">
+                    C 10K-15K
+                </label>
+								</div>
+								<div class="checkbox">
+									<input type="radio" id="radio16" name="wages" value="1">
+									<label for="radio16">
+                    D 15k+
+                </label>
+								</div>
+							</form>
+							<div class="contain" req="1" topic="6" name="q1" id="div6" type "3">
+								<h1 class="field">
+                3、请问您对当面的员工福利政策是否满意？
+                <span class="req">*</span>
+            </h1>
+								<form role="form">
+									<div class="checkbox">
+										<input type="radio" id="radio17" name="welfare" value="1">
+										<label for="radio17">
+                    A 很满意
+                </label>
+									</div>
+									<div class="checkbox">
+										<input type="radio" id="radio18" name="welfare" value="1">
+										<label for="radio18">
+                    B 比较满意
+                </label>
+									</div>
+									<div class="checkbox">
+										<input type="radio" id="radio19" name="welfare" value="1">
+										<label for="radio19">
+                    C 一般
+                </label>
+									</div>
+									<div class="checkbox">
+										<input type="radio" id="radio20" name="welfare" value="1">
+										<label for="radio20">
+                    D 不满意
+                </label>
+									</div>
+								</form>
+								<div class="contain" req="1" topic="7" name="q1" id="div7" type "3">
+									<h1 class="field">
+                4、请问您对公司报酬、奖励的公平性是否满意？
+                <span class="req">*</span>
+            </h1>
+									<form role="form">
+										<div class="checkbox">
+											<input type="radio" id="radio21" name="reward" value="1">
+											<label for="radio21">
+                    A 很满意
+                </label>
+											<div class="checkbox">
+												<input type="radio" id="radio22" name="reward" value="1">
+												<label for="radio22">
+                    B 比较满意
+                </label>
+												<div class="checkbox">
+													<input type="radio" id="radio23" name="reward" value="1">
+													<label for="radio23">
+                    C 一般
+                </label>
+													<div class="checkbox">
+														<input type="radio" id="radio24" name="reward" value="1">
+														<label for="radio24">
+                    D 不满意
+                </label>
+									</form>
+									</div>
+									<div class="menu">
+										<div class="caption">
+											<h1>三、对工作技能的掌握和选择</h1>
+										</div>
+										<div class="contain" req="1" topic="8" name="q1" id="div8" type "3">
+											<h1 class="field">
+                1、您觉得从事前端开发行业所必备的技能是？
+                <span class="req">*</span>
+            </h1>
+											<form role="form">
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox3" name="skill" value="1">
+													<label for="checkbox3">
+                    A 能用photoshop简单制图
+                </label>
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox4" name="skill" value="1">
+														<label for="checkbox4">
+                    B 精通HTML5+CSS3
+                </label>
+														<div class="checkbox">
+															<input type="checkbox" id="checkbox5" name="skill" value="1">
+															<label for="checkbox5">
+                    C 熟练掌握Javascript或者Actionscript
+                </label>
+															<div class="checkbox">
+																<input type="checkbox" id="checkbox6" name="skill" value="1">
+																<label for="checkbox6">
+                    D 精通Ajax技术
+                </label>
+																<div class="checkbox">
+																	<input type="checkbox" id="checkbox7" name="skill" value="1">
+																	<label for="checkbox7">
+                    E 掌握PHP/ASP.NET等
+                </label>
+																	<div class="checkbox">
+																		<input type="checkbox" id="checkbox8" name="skill" value="1">
+																		<label for="checkbox8">
+                    F 精通开发调试工具
+                </label>
+											</form>
+											<div class="contain" req="1" topic="9" name="q1" id="div9" type "3">
+												<h1 class="field">
+                2、您常用的UI框架是什么？
+                <span class="req">*</span>
+            </h1>
+												<form role="form">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox9" name="UI" value="1">
+														<label for="checkbox9">
+                    A.  Sass 
+                </label>
+														<div class="checkbox">
+															<input type="checkbox" id="checkbox10" name="UI" value="1">
+															<label for="checkbox10">
+                    B.Less   
+                </label>
+															<div class="checkbox">
+																<input type="checkbox" id="checkbox11" name="UI" value="1">
+																<label for="checkbox11">
+                     C.Stylus
+                
+             </form>
+             <div class="contain" req="1" topic="10" name="q1" id="div10" type"3">
+             <h1 class="field">
+                3.   您常用的预设处理器是什么？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox12" name="CPU" value="1">
+                <label for="checkbox12">
+                    A.easyui 
+                </label>
+																<div class="checkbox">
+																	<input type="checkbox" id="checkbox13" name="CPU" value="1">
+																	<label for="checkbox13">
+                    B.extjs 
+                </label>
+																	<div class="checkbox">
+																		<input type="checkbox" id="checkbox14" name="CPU" value="1">
+																		<label for="checkbox14">
+                    C.ligerui
+                </label>
+																		<div class="checkbox">
+																			<input type="checkbox" id="checkbox15" name="CPU" value="1">
+																			<label for="checkbox15">
+                    D.jqueryui jquery
+                </label>
+																			<div class="checkbox">
+																				<input type="checkbox" id="checkbox16" name="CPU" value="1">
+																				<label for="checkbox16">
+                    E.dojo
+                </label>
+												</form>
+												<div class="contain" req="1" topic="11" name="q1" id="div11" type "3">
+													<h1 class="field">
+                4. 你更喜欢在你的工作中使用哪款自动化工具？
+                <span class="req">*</span>
+            </h1>
+													<form role="form">
+														<div class="checkbox">
+															<input type="checkbox" id="checkbox17" name="work" value="1">
+															<label for="checkbox17">
+                  A.Gulp
+                </label>
+															<div class="checkbox">
+																<input type="checkbox" id="checkbox18" name="work" value="1">
+																<label for="checkbox18">
+                  B.NPM
+                </label>
+																<div class="checkbox">
+																	<input type="checkbox" id="checkbox19" name="work" value="1">
+																	<label for="checkbox19">
+                  C.Broccoli  
+                  <label>    
+             </form>
+             <div class="contain" req="1" topic="12" name="q1" id="div12" type"3">
+             <h1 class="field">
+                5.  您在工作中使用过哪一款 JS 模块加载器？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox20" name="JS" value="1">
+                <label for="checkbox20">
+                 A.  Browserify
+                </label>
+																	<div class="checkbox">
+																		<input type="checkbox" id="checkbox21" name="JS" value="1">
+																		<label for="checkbox21">
+                  B. RequireJS
+                </label>
+																		<div class="checkbox">
+																			<input type="checkbox" id="checkbox22" name="JS" value="1">
+																			<label for="checkbox22">
+                  C. webpack
+                  <label>
+             </form>
+             <div class="contain" req="1" topic="13" name="q1" id="div13" type"3">
+             <h1 class="field">
+                6.目前国内的主流html编辑器你最青睐哪一个？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox23" name="like" value="1">
+                <label for="checkbox23">
+                  A.Kindeditor 
+                </label>
+																			<div class="checkbox">
+																				<input type="checkbox" id="checkbox24" name="like" value="1">
+																				<label for="checkbox24">
+                  B.CKEditor
+                </label>
+																				<div class="checkbox">
+																					<input type="checkbox" id="checkbox25" name="like" value="1">
+																					<label for="checkbox25">
+                  C.Ueditor   
+                  </label>
+													</form>
+													<div class="contain" req="1" topic="14" name="q1" id="div14" type "3">
+														<h1 class="field">7.在这些编译成JavaScript的语言中，您最青睐哪种语言？<span class="req">*</span></h1>
+														<form role="form">
+															<div class="checkbox">
+																<input type="radio" id="radio99" name="love" value="1">
+																<label for="radio99">
+                  A.CoffeeScrip
+                </label>
+																<div class="checkbox">
+																	<input type="radio" id="radio100" name="love" value="1">
+																	<label for="radio100">
+                  B.TypeScript
+                </label>
+														</form>
+														<div class="contain" req="1" topic="15" name="q1" id="div15" type "3">
+															<h1 class="field">
+                8. 您的web页面是如何与后台进行交互的？
+                <!-- <span class="req">*</span> -->
+            </h1>
+															<form role="form">
+																<div class="checkbox">
+																	<input type="checkbox" id="checkbox99" name="web" value="1">
+																	<label for="checkbox99">
+                  A.使用纯servlet 
+                </label>
+																	<div class="checkbox">
+																		<input type="checkbox" id="checkbox100" name="web" value="1">
+																		<label for="checkbox100">
+                  B.Ajax技术
+                </label>
+																		<div class="checkbox">
+																			<input type="checkbox" id="checkbox101" name="web" value="1">
+																			<label for="checkbox101">
+                  C.使用第三方框架
+                </label>
+															</form>
+															<div class="contain" req="1" topic="16" name="q1" id="div16" type "3">
+																<h1 class="field">
+              9.   您经常使用的web调试工具是什么？
+                <!-- <span class="req">*</span> -->
+            </h1>
+																<form role="form">
+																	<div class="checkbox">
+																		<input type="checkbox" id="checkbox102" name="tool" value="1">
+																		<label for="checkbox102">
+                 A.IE 
+                </label>
+																		<div class="checkbox">
+																			<input type="checkbox" id="checkbox103" name="tool" value="1">
+																			<label for="checkbox103">
+                B. Firebug 
+                </label>
+																			<div class="checkbox">
+																				<input type="checkbox" id="checkbox104" name="tool" value="1">
+																				<label for="checkbox104">
+                 C. chrome
+                </label>
+																				<div class="checkbox">
+																					<input type="checkbox" id="checkbox105" name="tool" value="1">
+																					<label for="checkbox105">
+                 D. 其他
+                </label>
+																</form>
+																<div class="contain" req="1" topic="17" name="q1" id="div17" type "3">
+																	<h1 class="field">
+              10. 您觉得前端开发行业应该具备怎样的学历？
+               <!--  <span class="req">*</span> -->
+            </h1>
+																	<form role="form">
+																		<div class="checkbox">
+																			<input type="checkbox" id="checkbox106" name="record" value="1">
+																			<label for="checkbox106">
+                 A.专科
+                </label>
+																			<div class="checkbox">
+																				<input type="checkbox" id="checkbox107" name="record" value="1">
+																				<label for="checkbox107">
+                B. 本科
+                </label>
+																				<div class="checkbox">
+																					<input type="checkbox" id="checkbox108" name="record" value="1">
+																					<label for="checkbox108">
+                 C. 硕士
+                </label>
+																					<div class="checkbox">
+																						<input type="checkbox" id="checkbox109" name="record" value="1">
+																						<label for="checkbox109">
+                 D. 硕士以上
+                
+             </form>
+             <form>
+             <div class="contain" req="1" topic="18" name="q1" id="div18" type"3">
+             <h1 class="field">
+              11.  对于javascript框架您相对熟练掌握哪一种？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox110" name="KJ" value="1">
+                <label for="checkbox110">
+                 A.Undercore
+                </label>
+																						<div class="checkbox">
+																							<input type="checkbox" id="checkbox121" name="KJ" value="1">
+																							<label for="checkbox121">
+                B. AnjularJS
+                </label>
+																							<div class="checkbox">
+																								<input type="checkbox" id="checkbox111" name="KJ" value="1">
+																								<label for="checkbox111">
+                 C. Backbone
+                </label>
+																								<div class="checkbox">
+																									<input type="checkbox" id="checkbox112" name="KJ" value="1">
+																									<label for="checkbox112">
+                 D. React
+                
+             </form>
+              <form>
+             <div class="contain" req="1" topic="19" name="q1" id="div19" type"3">
+             <h1 class="field">
+              12.   您常用的模块打包管理器是什么？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox113" name="class" value="1">
+                <label for="checkbox113">
+                 A.Browserify
+                </label>
+																									<div class="checkbox">
+																										<input type="checkbox" id="checkbox114" name="class" value="1">
+																										<label for="checkbox114">
+                B.  RequirJS 
+                </label>
+																										<div class="checkbox">
+																											<input type="checkbox" id="checkbox115" name="class" value="1">
+																											<label for="checkbox115">
+                 C. Webpacke
+                </label>
+																											<div class="checkbox">
+																												<input type="checkbox" id="checkbox116" name="class" value="1">
+																												<label for="checkbox116">
+                 D. Mocha
+                
+             </form>
+             <form>
+             <div class="contain" req="1" topic="20" name="q1" id="div20" type"3">
+             <h1 class="field">
+              13. 您觉得在工作中哪项能力最重要？
+                <span class="req">*</span>
+            </h1>
+             <form role="form">
+                <div class="checkbox">
+                <input type="checkbox" id="checkbox117" name="world" value="1">
+                <label for="checkbox117">
+                 A.沟通能力
+                </label>
+																												<div class="checkbox">
+																													<input type="checkbox" id="checkbox118" name="world" value="1">
+																													<label for="checkbox118">
+                B.需求理解
+                </label>
+																													<div class="checkbox">
+																														<input type="checkbox" id="checkbox119" name="world" value="1">
+																														<label for="checkbox119">
+                 C.用户体验思维
+                </label>
+																														<div class="checkbox">
+																															<input type="checkbox" id="checkbox120" name="world" value="1">
+																															<label for="checkbox120">
+                D.逻辑分析能力    
+             
+            <!-- <a id="NExt" href="#" class="button">提交问卷</a> -->
+            <div class="footer">
+                <h1 class="title">
+                  <a href="#">提交问卷</a>
+               </h1>
+            </div>
+            </form>
+            </div>
+</div>
+	</body>
+
+</html>
