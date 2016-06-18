@@ -1,0 +1,48 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  
+</body>
+ <h1>网页翻译</h1>
+ <p>We got to talking about easing in a recent episode of ShopTalk with Val Head and Sarah Drasner. Easing is important stuff when it comes to animations and transitions. Combined with the duration, it has a huge effect on the feel of change. If you're taking animation seriously as part of the brand on a project, you should define and consistently use easings. </p>
+ <p>我们谈到在最近一集德拉斯纳瓦尔头莎拉行话宽松。在动画和过渡的时候，放松是很重要的。结合持续时间，它对改变的感觉有着巨大的影响。如果你正在认真的动画项目品牌的一部分，你应该明确和一贯使用的宽松政策。</p>
+ <li>That said, it's a balance between:</li>
+ <li>observation. 
+说，这是一个平衡：</li>
+<li>•	Crafting/using easings that match your brand</li>
+<li>•	制作/使用符合您品牌的宽松政策</li>
+<li>Let's look at one particular best practice, as I understand it. But first, another observation.</li>
+<li>让我们看看一个特别的最佳实践，因为我理解它。但首先，另一个观察</li>
+ <p>It's a pretty nice one! I'm guilty of hardly ever changing it. I set and tweak the durations and generally leave it to ease. Too nice, perhaps? I wonder if we would be more proactive about choosing well-fitting easings if CSS defaulted to the more boring/lifeless linear easing. Although linear can be quite useful, I've found, when the change is very small, like only moving a few pixels or a color changing shade.</p>
+ <p>这是一个非常好的一个！我很内疚，几乎没有改变它。我设置和调整的持续时间，一般离开它来缓解。太好了，也许？我不知道我们会选择合适的宽松政策如果CSS拖欠更无聊/无线性宽松更主动。虽然线性可能是非常有用的，我已经发现，当变化是非常小的，像只移动几个像素或一个颜色变化的阴影</p>
+ <p>The ease timing function is so nice, perhaps, because it's a variant of ease-in-out. That is, the change happens slowly both at the beginning and end, and speeds up only in the middle somewhere. This gives soft edges (metaphorically) to the change and generally feels good.</p>
+ <p>的轻松计时功能是如此的好，也许，因为它的一个变种，便于在外。也就是说，在开始和结束的情况下，这种变化是缓慢发生的，而只有在中间的某个地方才有速度。这给软边（隐喻）的变化和一般的感觉很好。</p>
+ <p>Think of a knight's squire. When the knight calls them, they better arrive at a run, and slow down into place. When the knight sends them away, they'd better very quickly get moving out of there. 
+That feels like a best practice. Like the animation is being courteous and obedient on both sides. Get here in a hurry, but compose yourself. Get out of here even faster and without delay.
+Here's the CSS that goes along with that kind of thinking. This changes the easing function depending on if the element in question is being shown or being hid, as well as the timing.
+</p>
+<p>想一个骑士的侍从。当骑士打电话时，他们最好到一个奔跑，慢下来的地方。当骑士把他们送去的时候，他们最好很快就离开那里。
+这感觉就像是一个最好的练习。喜欢的动画是有礼貌和听话的双方。在这里匆忙，但组成你自己。在这里得到更快速和不延误。
+这里的CSS伴随这种想法。这一变化取决于是否被显示或隐藏的元素，以及时间的缓解作用。容器。警告过渡时间功能，易用在出去的路上快
+</p>
+<p>过渡：0.2S；The animation timings we're using here are also in "rule" territory, as Val generally described: 0.1-0.2s for simple interface movements, and up to 0.5s for more complex or larger movements.
+In summary:
+•	ease is pretty nice, but you might want to customize some easings that feel right for your brand
+•	ease and ease-in-out have soft edges on both sides, but sometimes it's more appropriate to use ease-in or ease-out
+•	You don't have to use a single easing for both directions of an animation, you can switch it up
+•	You can change duration also
+</p>
+<p>我们在这里使用的动画时间也在“规则”的领土，如Val一般描述：简单的界面运动0.1-0.2s，到0.5s为更复杂的或更大的动作。
+
+在总结：
+
+安逸是很好，但你可能想定制一些easings感觉适合你的品牌
+放松和放松在外面有柔软的边，但有时它是更合适的使用缓解或缓解
+你也可以改变持续时间另外，这里有一个很棒的参照违约及其匹配三次贝塞尔如果你想从其中一个定制从那里：；
+</p>
+</html>
+
